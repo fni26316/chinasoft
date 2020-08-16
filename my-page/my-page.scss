@@ -1,0 +1,66 @@
+.my-page {
+    font-size: 14px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    color: #333333;
+    display: inline-block;
+
+    // 上下页按钮
+    .my-page-prev,
+    .my-page-next {
+        float: left;
+        width: 40px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid #ddd;
+        cursor: pointer;
+
+        &.my-page-forbid {
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: rgba(0, 0, 0, 0.2);
+        }
+
+        &:not(.my-page-forbid):hover {
+            border-color: #a02d35;
+        }
+    }
+
+    .my-page-group {
+        float: left;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+            list-style: none;
+            box-sizing: border-box;
+            min-width: 30px;
+            padding: 0 8px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .my-page-cell {
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+
+        .my-page-cell:hover,
+        .my-page-checked {
+            border-color: #a02d35;
+            background-color: #a02d35;
+            color: #ffffff;
+        }
+
+        .my-page-omit {
+            pointer-events: none;
+        }
+    }
+}

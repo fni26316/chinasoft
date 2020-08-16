@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./my-page/my-page.css">
+    <title>我的分页</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <div class="my-page"></div>
+    </div>
+
+
+    <script src="./my-page/my-page.js"></script>
+    <script>
+        myPageInit({
+            pages: 100,
+            currentPage: 1,
+            element: '.my-page',
+            callback: function (page) {
+                console.log("当前页:", page);
+            }
+        });
+    </script>
+</body>
+
+</html>
